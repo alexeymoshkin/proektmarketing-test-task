@@ -1,0 +1,8 @@
+{
+  "name": "Тестовое задание для Proektmarketing+1",
+  "description": "Автор: Мошкин Алексей",
+  "image": "heroku/ruby",
+  "repository": "https://github.com/heroku/ruby-getting-started",
+  "keywords": ["ruby", "rails" ],
+  "addons": ["heroku-postgresql"]
+}

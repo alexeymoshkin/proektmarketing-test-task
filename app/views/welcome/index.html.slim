@@ -1,0 +1,76 @@
+#main-wrap
+  section.wrap.holder style="margin-top: 30px; margin-bottom: 30px;"
+
+    .h1-title Отлик на вакансию «BackEnd RoR разработчик»
+    .b-appeal.vacancy-b-appeal
+      .b-appeal-img = image_tag "photo.jpg"
+      .b-appeal-desc
+        .b-appeal--name Алексей Мошкин
+        .b-appeal--post Web-разработчик, суммарный стаж 3 года
+        .b-appeal--text
+          p
+            ' Желаемая зп:
+            b 50 000 ₽
+          p
+            ' E-mail:
+            b = mail_to "resto.alex24@gmail.com"
+          p
+            ' Telegram:
+            b alexeymoshkin
+          p
+            ' Slack:
+            b -
+    .h2-title.vacancy-title
+      ' Навыки
+      small (отметить нужное или дополнить)
+
+    = form_for "form_name", method: :get, url: "#", html: {class: "b-form", id: "b-form-1"} do |f|
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'PostgreSQL'), OpenStruct.new(val: 'SQLite'), OpenStruct.new(val: 'MySQL')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mina'), OpenStruct.new(val: 'capistrano'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'slim'), OpenStruct.new(val: 'erb'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'coffescript'), OpenStruct.new(val: 'typescript'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'jQuery'), OpenStruct.new(val: 'vanilla js'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'scss'), OpenStruct.new(val: 'css'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'mac os'), OpenStruct.new(val: 'linux'), OpenStruct.new(val: 'другое')], :val, :val, {}, {class: "f-field-check"}
+      .vacancy-checkbox
+        = f.collection_check_boxes :checkboxes, [OpenStruct.new(val: 'RubyMine'), OpenStruct.new(val: 'SubLime'), OpenStruct.new(val: 'Emacs')], :val, :val, {}, {class: "f-field-check"}
+
+    article.content
+      h2.vacancy-title Дополнительная информация
+
+      h3 Предыдущие места работы
+
+      b Фортис Технологии (Февраль 2018 — Апрель 2018)
+      p
+      p
+        ' Принимал участие в разработке крупного приложения на Ruby on Rails -
+        ' системы учета медицинского оборудования, работающей на территории Москвы и Московской области.
+        ' Работал удаленно. Получил опыт командной работы над действительно крупным проектом,
+        ' взаимодействовал с аналитиками и тестировщиками.
+
+      b Алибаба 24 (Июнь 2015 — Февраль 2018)
+      p
+      p
+        ' Разработка нескольких веб-приложений на Ruby on Rails и Padrino Sinatra
+        ' для клиентов и менеджеров в команде с более сильным разработчиком.
+        ' Сбор данных - требований к приложениям и фидбека пользователей и заказчиков;
+        ' внесение изменений, рефакторинг своего и чужого кода.
+      p
+        ' Разработка нескольких браузерных плагинов ( JS / Chrome Extensions / Grunt / NPM )
+        ' для обмена данными с сайтом taobao.com и смежными торговыми площадками.
+      p
+        ' Верстка и внедрение шаблона интернет магазина на Ruby on Rails (gem Shoppe).
+      p
+        ' Разработка небольшого приложения для учета баланса пользователей
+        ' ( PHP / JS / MySQL / Ajax / Handlebars / Twitter Bootstrap ).
+
+      h3 Образование
+      b ИКИТ СФУ
+      p Геоинформационных технологий, Информационные технологии в геоинформационных системах
