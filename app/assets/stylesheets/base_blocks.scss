@@ -379,7 +379,6 @@ $select-clr-font: #000;
   display: block;
   width: 11px;
   height: 10px;
-  background: image_url("base-styles-icons.png") -100px -5px no-repeat;
   transition: rotate 0.2s;
   transform: rotate(0deg);
 }
@@ -732,7 +731,6 @@ input[type="checkbox"].f-field-check {
   & + label {
     cursor: pointer;
     pointer-events: auto;
-    &:before { background: image_url("base-styles-icons.png") no-repeat -24px -20px;  }
   }
   & + label:hover {
     &:before { background-position: -46px -20px; }
@@ -757,7 +755,6 @@ input[type="radio"].f-field-radio {
   & + label {
     cursor: pointer;
     pointer-events: auto;
-    &:before { background: image_url("base-styles-icons.png") no-repeat -24px -1px; }
   }
   & + label:hover {
     &:before { background-position: -47px -1px; }
